@@ -6,11 +6,11 @@ body {
 	height: 100vh;
 }
 
-.form {
+.form_body {
 	background-color: #15172b;
 	border-radius: 20px;
 	box-sizing: border-box;
-	height: 600px;
+	height: auto;
 	padding: 20px;
 	width: 320px;
 }
