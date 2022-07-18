@@ -214,9 +214,8 @@ body {
 	}
 }
 
-/* error msg style */
 #error_msg {
-	color: rgb(254, 46, 46);
+	/* color: rgb(254, 46, 46); */
 	font-family: sans-serif;
 	font-size: 12px;
 	font-weight: 100;
