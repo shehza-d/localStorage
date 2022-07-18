@@ -1,5 +1,5 @@
 //Show Password funciton
-function show_password() {
+let show_password = () => {
   const pass1 = document.getElementById("password");
   if (pass1.type === "password") {
     pass1.type = "text";
@@ -8,19 +8,20 @@ function show_password() {
   }
 }
 
-function form_valadtion() {
+let form_valadtion = () => {
   //checking if user have has put input > 60 char
-  const name = document.querySelector('#userName').value;
+  let name = document.querySelector('#userName').value;
   const email = document.querySelector('#email').value;
-  const city = document.querySelector('#city').value;
+  let city = document.querySelector('#city').value;
   const pass1 = document.querySelector('#password').value;
-  const pass2 = document.querySelector('#repeat_password').value;
+  let pass2 = document.querySelector('#repeat_password').value;
+  // console.log(city.length)
 
-
-  if (name.length || email.length || city.lenght || pass1.lenght || pass2.lenght >60){
+  // if(name.length>30){
+  if (name.length > 60 || email.length > 60 || city.lenght > 60 || pass1.lenght > 60 || pass2.lenght > 60) {
     console.log("Exceding limit of 60 Character")
-    
-  }else{
+    return;
+  } else {
     console.log("In limits of 60 Character")
 
   }
@@ -28,7 +29,7 @@ function form_valadtion() {
 
 
 
-    // if (name||email||city||pass1||pass2)
+  // if (name||email||city||pass1||pass2)
 
 
 
@@ -37,20 +38,20 @@ function form_valadtion() {
 
 
 
-    //matching password system
-    // const pass1 = document.getElementById("password").value;
-    // const pass2 = document.getElementById("repeat_password").value;
+  //matching password system
+  // const pass1 = document.getElementById("password").value;
+  // const pass2 = document.getElementById("repeat_password").value;
 
-    if (pass1 === pass2) {
-      document.querySelector('#error_msg').innerText = "Password  Match";
-      document.querySelector('#error_msg').style.color = 'green';
-      console.log("match")
-    } else {
-      document.querySelector('#error_msg').innerText = "Password didn't match";
-      document.querySelector('#error_msg').style.color = 'red';
-      console.log("Password didn't match!")
-      return;
-    }
+  if (pass1 === pass2) {
+    document.querySelector('#error_msg').innerText = "Password  Match";
+    document.querySelector('#error_msg').style.color = 'green';
+    // console.log("match")
+  } else {
+    document.querySelector('#error_msg').innerText = "Password didn't match";
+    document.querySelector('#error_msg').style.color = 'red';
+    // console.log("Password didn't match!")
+    return;
+  }
 
   // RegExp ya Regex lagne hyn idher
 
