@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Shehzad Signup</title>
+</head>
+<!-- making this index temperorily -->
+<body>
+	<div class="form_body">
+		<div class="title">SignUp</div>
+		<div class="subtitle">Welcome Let's create your account!</div>
+		<div class="subtitle" id="inputError"></div>
+
+		<form onsubmit="form_valadtion(); signUp(); return false">
+
+
+			<div class="input-container ic1">
+				<input class="input" type="text" id="userName" placeholder=" " name="name" />
+				<div class="cut"></div>
+				<label for="name" class="placeholder">Name</label>
+			</div>
+			<div class="input-container ic2">
+				<input class="input" type="email" id="email" placeholder=" " name="email" />
+				<div class="cut"></div>
+				<label for="Email" class="placeholder">Email</label>
+			</div>
+			<div class="input-container ic2">
+				<input class="input" type="date" id="dob" placeholder=" " name="DOP" />
+				<div class="cut"></div>
+				<label for="dob" class="placeholder">Date of Birth</label>
+			</div>
+			<div class="input-container ic2">
+				<input class="input" type="text" id="city" placeholder=" " name="city" />
+				<div class="cut"></div>
+				<label for="city" class="placeholder">City</label>
+			</div>
+			<div class="input-container ic2">
+				<input class="input" type="password" id="password" placeholder=" " name="password" required />
+				<div class="cut cut-short"></div>
+				<label for="Password" class="placeholder">Password </label>
+			</div>
+
+			<input type="checkbox" onclick="show_password()"><span class="showPassword">Show Password</span>
+			<p id="error_msg"></p>
+
+			<div class="input-container ic2">
+				<input class="input" type="password" id="repeat_password" placeholder=" " name="repeat-password"
+					required />
+				<div class="cut cut-short"></div>
+				<label for="Password" class="placeholder">Repeat Password</label>
+			</div>
+
+
+			<div class="mainDiv">
+				<button type="submit" class="submit secondBTN">SUBMIT </button>
+			</div>
+			<!-- <div><a href="./signup.html" class="signup_link">Dont have and account</a></div> -->
+		</form>
+		<button onclick="move_page()" class="page_move_btn">Already have an Account</button>
+		<div class="subtitle">by Shehzad</div>
+	</div>
+
+
+	<script src="./password-valadtion.js"></script>
+	<script src="./signup.js"></script>
+
+
+</body>
+
+</html>
+<!-- <details>
+		<summary>
+			<g-emoji class="g-emoji" alias="adult"
+				fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f9d1.png"><img class="emoji"
+					alt="adult" height="20" width="20"
+					src="https://github.githubassets.com/images/icons/emoji/unicode/1f9d1.png"></g-emoji> More about me
+		</summary>
+		<ul dir="auto">
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="telescope"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f52d.png"><img
+							class="emoji" alt="telescope" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f52d.png"></g-emoji> I’m
+					currently on a journey to get into <strong>Harvard</strong>
+				</p>
+			</li>
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="seedling"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png"><img
+							class="emoji" alt="seedling" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f331.png"></g-emoji> I’m
+					currently learning <strong>everything</strong>
+					<g-emoji class="g-emoji" alias="nerd_face"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f913.png"><img
+							class="emoji" alt="nerd_face" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f913.png"></g-emoji>
+				</p>
+			</li>
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="handshake"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f91d.png"><img
+							class="emoji" alt="handshake" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f91d.png"></g-emoji> I’m
+					looking for help with <strong>finding projects to contribute to!</strong>
+				</p>
+			</li>
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="man_technologist"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-1f4bb.png"><img
+							class="emoji" alt="man_technologist" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f468-1f4bb.png"></g-emoji>
+					All of my projects are available at <a href="https://krshkodes.co" rel="nofollow">krshkodes.co</a>
+				</p>
+			</li>
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="memo"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png"><img
+							class="emoji" alt="memo" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f4dd.png"></g-emoji> I
+					regularly write articles on <a href="https://blog.krshkodes.co" rel="nofollow">blog.krshkodes.co</a>
+				</p>
+			</li>
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="speech_balloon"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png"><img
+							class="emoji" alt="speech_balloon" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f4ac.png"></g-emoji> Ask me
+					about <strong>open source, web development, and Node.js</strong>
+				</p>
+			</li>
+			<li>
+				<p dir="auto">
+					<g-emoji class="g-emoji" alias="mailbox"
+						fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f4eb.png"><img
+							class="emoji" alt="mailbox" height="20" width="20"
+							src="https://github.githubassets.com/images/icons/emoji/unicode/1f4eb.png"></g-emoji> Reach
+					me out at <strong><a href="mailto:krshkodes@gmail.com">krshkodes@gmail.com</a></strong>
+				</p>
+			</li>
+		</ul>
+	</details> -->
