@@ -12,8 +12,7 @@ let signUp = () => {
 		repeat_password: document.querySelector('#repeat_password').value
 	}
 	// console.log(object)
-	let stringifiedObject = JSON.stringify(objectOfUserData);
-	localStorage.setItem("user1", stringifiedObject);
+	localStorage.setItem("user1", JSON.stringify(objectOfUserData));
 	// console.log(stringifiedObject)
 
 
@@ -32,13 +31,16 @@ function getAllUsers() {
 	// let getAllUsers = () => {   //ye nhi chal rhaa console kha raha hy can't access before initization
 	console.log(`get all user function running`)
 
-	let userInStringForm = localStorage.getItem("users1");
-	arrayOfObjects = JSON.parse(userInStringForm) || [];
+	arrayOfObjects = JSON.parse(localStorage.getItem("users1")) || [];
+
+	// let userInStringForm = localStorage.getItem("users1");
+	// arrayOfObjects = JSON.parse(userInStringForm) || [];
 	// console.log(users);
 }
 
 
 
+console.log(arrayOfObjects)
 
 
 
